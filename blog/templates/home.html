@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    
+</head>
+<body>
+    
+    <h1 class="head-font"> 책 리뷰 블로그 </h1>
+    
+    
+            <h2> 리뷰 목록 </h2>
+                <ul>
+                {% for post in posts %}
+                <li><a href="{% url 'detail' post.pk %}">{{ post.title }}</a><li>
+                {% endfor %}   
+                </ul>
+
+  <a href="{% url 'new' %}">리뷰 쓰기</a>  
+</body>
+</html>
